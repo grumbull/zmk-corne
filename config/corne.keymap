@@ -11,9 +11,9 @@
 #define ABC 0 # Maya
 #define EXT 1
 #define SYM 2
-#define NUM 3
-#define FUN 4
-#define SYS 5
+// #define NUM 3
+// #define FUN 4
+// #define SYS 5
 
 / {
         keymap {
@@ -29,9 +29,10 @@
    &trans &kp B &kp L &kp D &kp G &kp Q          &kp J   &kp F  &kp O     &kp U   &kp APOS  &trans
    &trans &kp N &kp R &kp T &kp S &kp V          &kp K   &kp H  &kp A     &kp E   &kp I     &trans
    &trans &kp X &kp M &kp C &kp W &kp Z          &kp P   &kp Y  &kp COMMA &kp DOT &kp SEMI  &trans
-          &mo NUM     &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp FUN
+          &trans      &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp trans
                         >;
                 };
+
                 EXT {
 // -----------------------------------------------------------------------------------------
 // |  B  |  L  |  D  |  G  |  Q  |     |  J  |  F  |  O  |  U  |  '  |
@@ -42,7 +43,7 @@
    &trans &kp B &kp L &kp D &kp G &kp Q          &kp J   &kp F  &kp O     &kp U   &kp APOS  &trans
    &trans &kp N &kp R &kp T &kp S &kp V          &kp K   &kp H  &kp A     &kp E   &kp I     &trans
    &trans &kp X &kp M &kp C &kp W &kp Z          &kp P   &kp Y  &kp COMMA &kp DOT &kp SEMI  &trans
-          &mo NUM     &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp FUN
+          &trans      &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp trans
                         >;
                 };
 
