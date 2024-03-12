@@ -8,38 +8,45 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define ABC 0 # Maya
+#define EXT 1
+#define SYM 2
+#define NUM 3
+#define FUN 4
+#define SYS 5
+
 / {
         keymap {
-                compatible = "zmk,keymap";
+               compatible = "zmk,keymap";
 
-                default_layer {
+                ABC {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  B  |  L  |  D  |  G  |  Q  |     |  J  |  F  |  O  |  U  |  '  |
+// |  N  |  R  |  T  |  S  |  V  |     |  K  |  H  |  A  |  E  |  I  |
+// |  X  |  M  |  C  |  W  |  Z  |     |  P  |  Y  |  ,  |  .  |  ;  |
+//             | NUM |SHIFT| EXT |     | SYM | SPC | FUN |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &trans &kp B &kp L &kp D &kp G &kp Q          &kp J   &kp F  &kp O     &kp U   &kp APOS  &trans
+   &trans &kp N &kp R &kp T &kp S &kp V          &kp K   &kp H  &kp A     &kp E   &kp I     &trans
+   &trans &kp X &kp M &kp C &kp W &kp Z          &kp P   &kp Y  &kp COMMA &kp DOT &kp SEMI  &trans
+          &mo NUM     &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp FUN
                         >;
                 };
-                lower_layer {
+                EXT {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |BTCLR|     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  B  |  L  |  D  |  G  |  Q  |     |  J  |  F  |  O  |  U  |  '  |
+// |  N  |  R  |  T  |  S  |  V  |     |  K  |  H  |  A  |  E  |  I  |
+// |  X  |  M  |  C  |  W  |  Z  |     |  P  |  Y  |  ,  |  .  |  ;  |
+//             | NUM |SHIFT| EXT |     | SYM | SPC | FUN |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &bt BT_CLR   &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &trans &kp B &kp L &kp D &kp G &kp Q          &kp J   &kp F  &kp O     &kp U   &kp APOS  &trans
+   &trans &kp N &kp R &kp T &kp S &kp V          &kp K   &kp H  &kp A     &kp E   &kp I     &trans
+   &trans &kp X &kp M &kp C &kp W &kp Z          &kp P   &kp Y  &kp COMMA &kp DOT &kp SEMI  &trans
+          &mo NUM     &kp LSHIFT  &mo EXT        &mo SYM        &kp SPACE         &kp FUN
                         >;
                 };
 
-                raise_layer {
+                SYM {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
