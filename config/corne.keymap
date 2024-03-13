@@ -19,7 +19,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        ABC {
+        abc {
             // -----------------------------------------------------------------------------------------
             // |  B  |  L  |  D  |  G  |  Q  |     |  J  |  F  |  O  |  U  |  '  |
             // |  N  |  R  |  T  |  S  |  V  |     |  K  |  H  |  A  |  E  |  I  |
@@ -27,10 +27,46 @@
             //             | NUM |SHIFT| EXT |     | SYM | SPC | FUN |
 
             bindings = <
-&none  &kp B  &kp L  &kp D  &kp G       &kp Q    &kp J  &kp F      &kp O      &kp U    &kp APOS  &none
-&none  &kp N  &kp R  &kp T  &kp S       &kp V    &kp K  &kp H      &kp A      &kp E    &kp I     &none
-&none  &kp X  &kp M  &kp C  &kp W       &kp Z    &kp P  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &none
-                     &none  &kp LSHIFT  &none    &none  &kp SPACE  &none
+&none  &kp W  &kp C  &kp G  &kp D       &kp B            &kp Q    &kp L      &kp O      &kp U    &kp APOS  &none
+&none  &kp R  &kp S  &kp T  &kp H       &kp V            &kp J    &kp N      &kp A      &kp E    &kp I     &none
+&none  &kp X  &kp F  &kp Y  &kp P       &kp K            &kp Z    &kp M      &kp COMMA  &kp DOT  &kp SEMI  &none
+                     &mo 1  &kp LSHIFT  &kp BACKSPACE    &kp TAB  &kp SPACE  &mo 2
+            >;
+        };
+
+        ext {
+            bindings = <
+&none  &kp ESC       &kp K_BACK    &kp K_FORWARD     &kp K_FIND      &kp INSERT       &kp PAGE_UP    &kp HOME       &kp UP    &kp END     &kp PRINTSCREEN  &none
+&none  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RIGHT_ALT    &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT   &kp RIGHT_SHIFT  &none
+&none  &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LEFT_GUI    &kp LC(V)        &none          &kp BACKSPACE  &none     &kp DELETE  &none            &none
+                                   &none             &none           &none            &mo 3          &kp ENTER      &none
+            >;
+        };
+
+        sym {
+            bindings = <
+&none  &kp EXCL      &kp AT        &kp HASH          &kp DOLLAR      &kp PERCENT    &kp ASTERISK  &kp EQUAL              &kp UNDER          &kp TILDE        &kp PLUS   &none
+&none  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp CARET      &kp SLASH     &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp MINUS  &none
+&none  &none         &none         &kp BACKSLASH     &kp PIPE        &kp AMPS       &kp GRAVE     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none      &none
+                                   &none             &none           &mo 4          &none         &none                  &none
+            >;
+        };
+
+        num {
+            bindings = <
+&none  &none         &none         &none             &none           &kp KP_NUMLOCK    &kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp PLUS   &none
+&none  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RIGHT_ALT     &kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS  &none
+&none  &none         &none         &none             &none           &none             &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &none
+                                   &none             &none           &none             &none         &none         &none
+            >;
+        };
+
+        fun {
+            bindings = <
+&none  &kp K_STOP    &kp C_REWIND  &kp K_PLAY_PAUSE  &kp C_FF         &kp C_BRIGHTNESS_INC    &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
+&none  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT   &kp C_BRIGHTNESS_DEC    &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&none  &kp K_MUTE    &kp C_VOL_DN  &none             &kp C_VOLUME_UP  &none                   &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
+                                   &none             &none            &none                   &none    &none   &none
             >;
         };
     };
