@@ -27,10 +27,10 @@
             //             | NUM |SHIFT| EXT |     | SYM | SPC | FUN |
 
             bindings = <
-&none  &kp W  &kp C  &kp G           &kp D          &kp B    &kp Q  &kp L      &kp O      &kp U    &kp APOS  &none
-&none  &kp R  &kp S  &kp T           &kp H          &kp K    &kp J  &kp N      &kp A      &kp E    &kp I     &none
-&none  &kp X  &kp F  &kp Y           &kp P          &kp V    &kp Z  &kp M      &kp COMMA  &kp DOT  &kp SEMI  &none
-                     &kp LEFT_SHIFT  &kp BACKSPACE  &mo 1    &mo 2  &kp SPACE  &kp TAB
+&none  &kp W  &kp C  &kp G          &kp D           &kp B    &kp Q  &kp L      &kp O      &kp U    &kp APOS  &none
+&none  &kp R  &kp S  &kp T          &kp H           &kp K    &kp J  &kp N      &kp A      &kp E    &kp I     &none
+&none  &kp X  &kp F  &kp Y          &kp P           &kp V    &kp Z  &kp M      &kp COMMA  &kp DOT  &kp SEMI  &none
+                     &kp BACKSPACE  &kp LEFT_SHIFT  &mo 1    &mo 2  &kp SPACE  &kp TAB
             >;
         };
 
